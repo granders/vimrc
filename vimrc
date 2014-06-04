@@ -1,3 +1,6 @@
+" -------------------------------------------------------------------------
+"  Vundle configuration
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -16,6 +19,10 @@ Plugin 'gmarik/Vundle.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Fuzzy file search
+Plugin 'kien/ctrlp.vim'
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -26,10 +33,15 @@ filetype plugin indent on    " required
 " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+ 
+" -------------------------------------------------------------------------
+" ctrlp configuration
 
+let g:ctrlp_map = '<c-p>'
 
-" Configuration file for vim
+" -------------------------------------------------------------------------
+" non-plugin stuff
+
 set modelines=0		" CVE-2007-2438
 
 " Normally we use vim-extensions. If you want true vi-compatibility
@@ -43,7 +55,7 @@ au BufWrite /private/tmp/crontab.* set nowritebackup
 au BufWrite /private/etc/pw.* set nowritebackup
 
 " More reasonable tabs
-set ts=4
+set ts=8
 set expandtab
 set shiftwidth=4
 
