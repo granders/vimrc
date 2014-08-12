@@ -41,6 +41,10 @@ let g:ctrlp_map = '<c-p>'
 
 " -------------------------------------------------------------------------
 " non-plugin stuff
+"
+
+" Disable swap file
+set noswapfile
 
 set modelines=0		" CVE-2007-2438
 
@@ -55,7 +59,7 @@ au BufWrite /private/tmp/crontab.* set nowritebackup
 au BufWrite /private/etc/pw.* set nowritebackup
 
 " More reasonable tabs
-set ts=8
+set ts=4
 set expandtab
 set shiftwidth=4
 
